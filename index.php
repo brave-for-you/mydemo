@@ -1,6 +1,5 @@
-<?php
-
-        // 改文件复制路径的分发
+<?php 
+    // 改文件复制路径的分发
     // 表示路径
     $path = 'index';
     // 文件名称
@@ -16,6 +15,8 @@
         if(count($arr) == 2){
             $path = $arr[0];
             $filename = $arr[1];
+        }else{
+            $filename = 'login';
         }
     }else{
         // 表示登录页面
@@ -23,5 +24,4 @@
     }
     // 作用就是载入一个页面
     include('./view/'.$path.'/'.$filename.'.html');
-
 ?>
