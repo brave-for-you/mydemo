@@ -7,11 +7,21 @@ require.config({
         template: 'artTemplate/template',
         bootstrap: 'bootstrap/js/bootstrap',
         nprogress: 'nprogress/nprogress',
+        datepicker: 'bootstrap-datepicker/js/bootstrap-datepicker',
+        language: 'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+        validate: 'validate/jquery-validate',
+        form: 'jquery-form/jquery.form',
         util: '../js/util',
         overlay: '../js/overlay'
     },
     shim: {
         //把bootstrap转化成标准模块(依赖于标准模块的jQuery模块)
         deps: ['jquery']
+    },
+    language: {
+        deps: ["jquery", "datepicker"]
+    },
+    validate: {
+        deps: ["jquery"]
     }
 });
