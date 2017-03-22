@@ -6,6 +6,7 @@ define([
 ], function($) {
     return {
         setMenu: function(pathname) {
+            $(".navs ul li a").removeClass();
             $(".navs a[href='" + pathname + "']").addClass("active");
         },
         qs: function(pname) {

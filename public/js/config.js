@@ -11,17 +11,29 @@ require.config({
         language: 'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
         validate: 'validate/jquery-validate',
         form: 'jquery-form/jquery.form',
+        uploadify : 'uploadify/jquery.uploadify',
+        region : 'jquery-region/jquery.region',
+        ckeditor : 'ckeditor/ckeditor',
         util: '../js/util',
         overlay: '../js/overlay'
     },
     shim: {
-        //把bootstrap转化成标准模块(依赖于标准模块的jQuery模块)
-        deps: ['jquery']
-    },
-    language: {
-        deps: ["jquery", "datepicker"]
-    },
-    validate: {
-        deps: ["jquery"]
+        bootstrap : {
+            // 把bootstrap转成标准模块（依赖于标准的jQuery模块）
+            deps : ['jquery']
+            },
+        language: {
+            deps: ["jquery", "datepicker"]
+        },
+        validate: {
+            deps: ["jquery"]
+        },
+        uploadify : {
+            deps : ["jquery"]
+        },
+        ckeditor : {
+            exports : "CKEDITOR",
+            deps : ["jquery"]
+        }
     }
 });
