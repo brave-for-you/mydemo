@@ -24,6 +24,7 @@ define(['jquery','util','template','ckeditor','region','validate','form','datepi
                 onUploadSuccess:function(file,data){
                     data=JSON.parse(data);
                     $(".priview img").attr("src",data.result.path);
+                    console.log(data);
                 }
             });
 
