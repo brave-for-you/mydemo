@@ -13,6 +13,7 @@ define(['jquery','template','util','ckeditor','validate','form'],function($,temp
         data : {cs_id : cs_id},
         dataType : 'json',
         success : function(data){
+            // console.log(data);
             // 渲染模板
             var html = template('basicTpl',data.result);
             $('#basicInfo').html(html);
